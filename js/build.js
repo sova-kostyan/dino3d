@@ -1326,6 +1326,11 @@ if(config.logs) {
                 input.keys.space.clock.elapsedTime = 0;
             }
         }
+        dispatchEvent(new KeyboardEvent('keyup', {
+            bubbles: true,
+            cancelable: true,
+            keyCode: 32
+        }))
     }
 
     reset() {
